@@ -13,22 +13,22 @@
     </template>
     <v-card-text class="d-flex">
       <div class="mt-0 pa-0">
-      <v-icon
-        v-for="condition in pod?.status?.conditions"
-        :key="`${condition.status}-${condition.type}`"
-        :color="condition.status === 'True' ? 'success' : 'error'"
-        :icon="condition.status === 'True' ? 'mdi-check-bold' : 'mdi-close'"
-        :size="10"
-      ></v-icon>
+        <v-icon
+          v-for="condition in pod?.status?.conditions"
+          :key="`${condition.status}-${condition.type}`"
+          :color="condition.status === 'True' ? 'success' : 'error'"
+          :icon="condition.status === 'True' ? 'mdi-check-bold' : 'mdi-close'"
+          :size="10"
+        ></v-icon>
       </div>
       <v-spacer />
-        <v-chip
-          :color="pod?.status?.phase === 'Running' ? 'success' : 'error'"
-          :prepend-icon="pod?.status?.phase === 'Running' ? 'mdi-check-circle' : 'mdi-close-circle'"
-          size="x-small"
-        >
-          {{ pod?.status?.phase }}
-        </v-chip>
+      <v-chip
+        :color="pod?.status?.phase === 'Running' ? 'success' : 'error'"
+        :prepend-icon="pod?.status?.phase === 'Running' ? 'mdi-check-circle' : 'mdi-close-circle'"
+        size="x-small"
+      >
+        {{ pod?.status?.phase }}
+      </v-chip>
     </v-card-text>
     <!-- <v-card-actions>
     <v-dialog width="500">
@@ -51,7 +51,7 @@ export default {
   props: {
     pod: {
       type: Object,
-      required: false,
+      required: false
     }
   }
 }
@@ -59,7 +59,7 @@ export default {
 
 <style lang="scss">
 .pod-card {
-  .v-card-item{
+  .v-card-item {
     padding: 1px;
     &__prepend {
       padding-inline-end: 0.3rem;
@@ -70,7 +70,6 @@ export default {
         .v-icon {
           color: cadetblue;
         }
-
       }
     }
   }

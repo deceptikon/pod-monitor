@@ -6,7 +6,7 @@ const order = ref()
 </script>
 
 <template>
-  <v-app full-height style="width: 100%;">
+  <v-app full-height style="width: 100%">
     <v-navigation-drawer color="grey-darken-2">
       <v-list>
         <v-list-item>
@@ -18,12 +18,7 @@ const order = ref()
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar
-      :order="order"
-      color="grey-lighten-2"
-      flat
-      title="Application bar"
-    >
+    <v-app-bar :order="order" color="grey-lighten-2" flat title="Application bar">
       <!-- <template v-slot:append>
         <v-switch
           v-model="order"
@@ -36,7 +31,7 @@ const order = ref()
       </template> -->
     </v-app-bar>
 
-    <v-main style="min-height: 300px;">
+    <v-main style="min-height: 300px">
       <RouterView />
     </v-main>
   </v-app>

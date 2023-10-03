@@ -6,7 +6,6 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
-
 // Vuetify
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -17,10 +16,9 @@ const vuetify = createVuetify({
   components,
   directives,
   icons: {
-    defaultSet: 'mdi',
-  },
+    defaultSet: 'mdi'
+  }
 })
-
 
 const app = createApp(App)
 
