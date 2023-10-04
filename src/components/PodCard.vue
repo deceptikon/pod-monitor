@@ -200,6 +200,7 @@ interface Map {
   [key: Statuses[any]]: Keys
 }
 export default {
+  name: 'PodCard',
   data: () => ({
     menu: [{ title: 'Скрыть', icon: 'mdi-eye-off' }]
   }),

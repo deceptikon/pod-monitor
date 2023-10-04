@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import axios from 'axios'
-import ThePod from './../components/Pod.vue'
-import { computed, reactive } from 'vue'
+import PodCard from '../components/PodCard.vue'
+import { reactive } from 'vue'
 
 const state = reactive({
   pods: [],
@@ -24,8 +24,8 @@ fetchPods()
 <template>
   <v-container fluid>
     <v-row no-gutters>
-      <v-col cols="auto" class="pa-1" v-for="pod in state.pods" :key="pod?.name">
-        <the-pod :pod="pod" />
+      <v-col cols="auto" class="pa-1" v-for="(pod, i) in state.pods" :key="i">
+        <pod-card :pod="pod" />
       </v-col>
     </v-row>
   </v-container>
