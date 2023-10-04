@@ -18,7 +18,7 @@ const order = ref()
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar :order="order" color="grey-lighten-2" flat title="Application bar">
+    <v-app-bar :order="order" color="grey-lighten-2" flat title="Pod monitor">
       <!-- <template v-slot:append>
         <v-switch
           v-model="order"
